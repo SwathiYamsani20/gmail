@@ -1,13 +1,16 @@
 import React from "react";
 import { useState } from "react";
-import SideBar from "../SideBar/SideBar";
 import "./Hero.css";
 import mails from "../../mails";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
-
+import { Link } from "react-router-dom";
+import StarIcon from "@mui/icons-material/Star"; // Add Material-UI Star icon
+import StarBorderIcon from "@mui/icons-material/StarBorder";
+import { useLocation } from "react-router-dom";
 
 function Hero() {
   const [mail, setMail] = useState(mails);
+  const { mails, toggleStar } = useOutletContext();
   const [checkedMails, setCheckedMails] = useState([]);
 
   function deleteMail() {
@@ -31,17 +34,28 @@ function Hero() {
             <DeleteOutlinedIcon />
           </td>
         </tr>
-        {mail.map((val) => (
-        <a href={`/content/${val.id}`}> <tr key={val.id} >
+        {filteredMails.map((val) => (
+          <tr key={val.id} className="row">
             <td>
-              <input type="checkbox" onClick={() => updateCheckBox(val.id)} />{" "}
+              <input
+                type="checkbox"
+                onClick={() => updateCheckBox(val.id)}
+                className="checkb0x"
+              />
             </td>
             <td>
-              <td>{val.title}</td>
+              {/* Star Icon - clickable to toggle star status */}
+              <span onClick={() => toggleStar(val.id)}>
+                {val.starred ? <StarBorderIcon /> : <StarIcon />}
+              </span>
             </td>
-            <td>{val.content.substring(0,120)+"..."}</td>
+            <a href={`/content/${val.id}`}>
+              <td>
+                <td>{val.title}</td>
+              </td>
+              <td>{val.content.substring(0, 115) + "..."}</td>
+            </a>
           </tr>
-          </a> 
         ))}
       </table>
     </div>
