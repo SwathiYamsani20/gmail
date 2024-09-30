@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Starredmails() {
-  return (
-    <div>Starredmails</div>
-  )
+  return <div>Starredmails</div>;
 }
 
-export default Starredmails
+export default Starredmails;

@@ -1,26 +1,23 @@
-.logo{
-    min-width: 238px;
-    height: 80px;
-    align-items: center;
-    padding-right: 30px;
+.logo {
+  min-width: 238px;
+  height: 80px;
+  align-items: center;
+  padding-right: 30px;
 }
-.navbar{
-    width: 100%;
-    display: flex;
-    
-    align-items: center;
-    background: #fff;
-    margin-left:20px
+.navbar {
+  width: 100%;
+  display: flex;
 
-
-    
+  align-items: center;
+  background: #fff;
+  margin-left: 20px;
 }
-li{
-    display: inline-flex;
-    border: 20px solid white;
+li {
+  display: inline-flex;
+  border: 20px solid white;
 }
-.search-box{
-    margin-left:270px;
-    padding: 5px 100px;
-    margin-top: 10px;
+.search-box {
+  margin-left: 270px;
+  padding: 5px 100px;
+  margin-top: 10px;
 }

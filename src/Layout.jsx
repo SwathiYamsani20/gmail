@@ -7,16 +7,6 @@ import mailsData from "./mails";
 
 function Layout() {
   const [openMenu, setOpenMenu] = useState(true);
-  const [mails, setMails] = useState(mailsData);
-  const toggleStar = (id) => {
-    setMails(
-      mails.map((mail) =>
-        mail.id === id ? { ...mail, starred: !mail.starred } : mail
-      )
-    );
-  };
-
-  const starredMails = mails.filter((mail) => mail.starred);
 
   const toggle = () => {
     setOpenMenu((prev) => !prev);
@@ -27,7 +17,7 @@ function Layout() {
       <div className="sub-container">
         {openMenu ? <SideBar /> : null}
 
-        <Outlet context={{ mails, toggleStar, starredMails }} />
+        <Outlet />
       </div>
     </div>
   );
