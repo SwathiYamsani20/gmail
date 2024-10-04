@@ -1,0 +1,166 @@
+<style>
+    .stylish-photos {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      align-items: center;
+      justify-content: center;
+      padding: 102px 80px;
+    }
+    
+    .content-wrapper {
+      display: flex;
+      width: 100%;
+      max-width: 1456px;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .main-title {
+      color: #000;
+      letter-spacing: -0.72px;
+      text-align: center;
+      font: 600 48px Montserrat, sans-serif;
+    }
+    
+    .subtitle {
+      color: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      letter-spacing: -0.54px;
+      margin-top: 70px;
+      font: 400 36px/50px Montserrat, sans-serif;
+    }
+    
+    .card-container {
+      align-self: stretch;
+      margin-top: 117px;
+    }
+    
+    .card-grid {
+      gap: 20px;
+      display: flex;
+    }
+    
+    .card {
+      background-color: #fff;
+      display: flex;
+      flex-grow: 1;
+      padding-bottom: 61px;
+      flex-direction: column;
+      align-items: center;
+      font-family: Montserrat, sans-serif;
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+    
+    .card-image {
+      aspect-ratio: 1.56;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      align-self: stretch;
+    }
+    
+    .card-title {
+      color: #000;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.36px;
+      margin-top: 43px;
+    }
+    
+    .card-description {
+      color: rgba(0, 0, 0, 0.8);
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      letter-spacing: -0.27px;
+      margin-top: 36px;
+    }
+    
+    .card-content {
+      display: flex;
+      margin-top: 43px;
+      flex-direction: column;
+      padding: 0 64px;
+    }
+    
+    @media (max-width: 991px) {
+      .stylish-photos {
+        padding: 0 20px 100px;
+      }
+    
+      .content-wrapper {
+        max-width: 100%;
+      }
+    
+      .main-title {
+        max-width: 100%;
+        font-size: 40px;
+      }
+    
+      .subtitle {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .card-container {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .card-grid {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+    
+      .card {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .card-image {
+        max-width: 100%;
+      }
+    
+      .card-title {
+        margin-top: 40px;
+      }
+    
+      .card-content {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+    }
+    </style>
+    
+    <section class="stylish-photos">
+      <div class="content-wrapper">
+        <h1 class="main-title">Make your photos more stylish</h1>
+        <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+        <div class="card-container">
+          <div class="card-grid">
+            <article class="card">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f9e4de501b1085d7eff1dca2222e66f19dcfbdebceed907d58561419f24a5c1b?placeholderIfAbsent=true&apiKey=9615077c30154bd3b6a419062eecef10" class="card-image" alt="Stylish photo example 1" />
+              <h2 class="card-title">Sed ut perspiciatis</h2>
+              <p class="card-description">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
+            </article>
+            <article class="card">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ae0882277b145efb09ba227a00e118918f772fb50930588546e9dceaacecac40?placeholderIfAbsent=true&apiKey=9615077c30154bd3b6a419062eecef10" class="card-image" alt="Stylish photo example 2" />
+              <h2 class="card-title">Lorem ipsum dolor</h2>
+              <p class="card-description">Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+            </article>
+            <article class="card">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/bf953efbef7d698f58a5e03f8307547c3b30533f1ba712f1897efb49cfa7aa79?placeholderIfAbsent=true&apiKey=9615077c30154bd3b6a419062eecef10" class="card-image" alt="Stylish photo example 3" />
+              <div class="card-content">
+                <h2 class="card-title">Nemo enim ipsam</h2>
+                <p class="card-description">Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
