@@ -11,10 +11,6 @@ function Navbar({ toggle }) {
         <MenuIcon />
       </div>
       <img src={logo} alt="mail-img" className="logo" />
-
-      <div>
-        <input type="text" placeholder="Search mail" className="search-box" />
-      </div>
     </div>
   );
 }
