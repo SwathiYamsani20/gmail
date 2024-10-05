@@ -4,7 +4,7 @@ import "./Hero.css";
 import mails from "../../mails";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import { Link } from "react-router-dom";
-import StarIcon from "@mui/icons-material/Star"; // Add Material-UI Star icon
+import StarIcon from "@mui/icons-material/Star";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { useLocation } from "react-router-dom";
 

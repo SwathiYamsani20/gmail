@@ -25,7 +25,7 @@ function SideBar() {
             <StarOutlineOutlinedIcon />
             Starred
           </Link>
-          <Link to="/snoozed" className="snoozed">
+          {/* <Link to="/snoozed" className="snoozed">
             <WatchLaterOutlinedIcon />
             Snoozed
           </Link>
@@ -36,7 +36,7 @@ function SideBar() {
           <Link to="/drafts" className="drafts">
             <InsertDriveFileOutlinedIcon />
             Drafts
-          </Link>
+          </Link> */}
         </div>
       </div>
     </>

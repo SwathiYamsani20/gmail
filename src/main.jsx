@@ -10,9 +10,7 @@ import {
 } from "react-router-dom";
 import Layout from "./Layout.jsx";
 import Hero from "./components/Hero/Hero.jsx";
-import SideBar from "./components/SideBar/SideBar.jsx";
 import Content from "./components/content/Content.jsx";
-import { useParams } from "react-router-dom";
 import Starredmails from "./components/Starredmails/Starredmails.jsx";
 
 const router = createBrowserRouter(
