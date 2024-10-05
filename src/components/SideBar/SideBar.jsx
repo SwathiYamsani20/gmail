@@ -17,26 +17,26 @@ function SideBar() {
           Compose
         </div>
         <div className="list">
-          <a href="/inbox" className="inbox">
+          <Link to="/inbox" className="inbox">
             <InboxOutlinedIcon />
             Inbox
-          </a>
-          <a href="/starred" className="starred">
+          </Link>
+          <Link to="/starred" className="starred">
             <StarOutlineOutlinedIcon />
             Starred
-          </a>
-          <a href="/snoozed" className="snoozed">
+          </Link>
+          <Link to="/snoozed" className="snoozed">
             <WatchLaterOutlinedIcon />
             Snoozed
-          </a>
-          <a href="/sent" className="sent">
+          </Link>
+          <Link to="/sent" className="sent">
             <SendOutlinedIcon />
             Sent
-          </a>
-          <a href="/drafts" className="drafts">
+          </Link>
+          <Link to="/drafts" className="drafts">
             <InsertDriveFileOutlinedIcon />
             Drafts
-          </a>
+          </Link>
         </div>
       </div>
     </>

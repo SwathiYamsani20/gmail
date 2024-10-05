@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { useState } from "react";
 import "./Hero.css";
@@ -8,12 +6,11 @@ import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import { Link } from "react-router-dom";
 import StarIcon from "@mui/icons-material/Star"; // Add Material-UI Star icon
 import StarBorderIcon from "@mui/icons-material/StarBorder";
-import { useLocation } from "react-router-dom"; 
+import { useLocation } from "react-router-dom";
 
 function Hero() {
   const [mail, setMail] = useState(mails);
   const [checkedMails, setCheckedMails] = useState([]);
-
 
   function deleteMail() {
     setMail((prev) => prev.filter((val) => !checkedMails.includes(val.id)));
@@ -27,12 +24,11 @@ function Hero() {
       return prev.filter((val) => val !== id);
     });
   }
-  function toggleStar(id){
-    setMail(mail.map((m)=>m.id===id?{...m,starred:!m.starred}:m))
+  function toggleStar(id) {
+    setMail(mail.map((m) => (m.id === id ? { ...m, starred: !m.starred } : m)));
   }
-  const mailsToDisplay = location.pathname === "/starred" 
-  ? mail.filter((m) => m.starred) 
-  : mail;
+  const mailsToDisplay =
+    location.pathname === "/starred" ? mail.filter((m) => m.starred) : mail;
   return (
     <div className="table-container">
       <table>
@@ -42,27 +38,27 @@ function Hero() {
           </td>
         </tr>
         {mailsToDisplay.map((val) => (
-            <tr key={val.id} className="row">
-              <td>
-                <input type="checkbox" onClick={() => updateCheckBox(val.id)} className="checkb0x"/>
-              </td>
-              <td>
+          <tr key={val.id} className="row">
+            <td>
+              <input
+                type="checkbox"
+                onClick={() => updateCheckBox(val.id)}
+                className="checkb0x"
+              />
+            </td>
+            <td>
               {/* Star Icon - clickable to toggle star status */}
-              <span
-               
-                onClick={() => toggleStar(val.id)}
-              >
+              <span onClick={() => toggleStar(val.id)}>
                 {val.starred ? <StarBorderIcon /> : <StarIcon />}
               </span>
             </td>
-            <a href={`/content/${val.id}`} >
+            <Link to={`/content/${val.id}`}>
               <td>
                 <td>{val.title}</td>
               </td>
               <td>{val.content.substring(0, 115) + "..."}</td>
-              </a>
-            </tr>
-         
+            </Link>
+          </tr>
         ))}
       </table>
     </div>
