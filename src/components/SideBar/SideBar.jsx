@@ -8,11 +8,11 @@ import WatchLaterOutlinedIcon from "@mui/icons-material/WatchLaterOutlined";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import InsertDriveFileOutlinedIcon from "@mui/icons-material/InsertDriveFileOutlined";
 
-function SideBar() {
+function SideBar({onComposeClick}) {
   return (
     <>
       <div className="side-bar">
-        <div className="compose">
+        <div className="compose" onClick={onComposeClick}>
           <EditIcon className="edit-icon" />
           Compose
         </div>
